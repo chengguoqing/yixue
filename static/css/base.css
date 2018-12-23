@@ -401,7 +401,7 @@ input {
 }
 
 .red {
-	color: #F86194 !important
+	color: #ef7e78 !important
 }
 
 .wc {
@@ -941,9 +941,11 @@ textarea {
 }
 
 .ls {
-	color: #1f2e7f;
+	color: #4da9ff;
 }
-
+.lser{
+	color: #51cb9c;
+}
 
 
 ul {
@@ -961,7 +963,7 @@ ul {
 }
 
 .zb {
-	color: #818181 !important;
+	color: #bfbfbf !important;
 }
 
 .za {
@@ -1164,4 +1166,7 @@ a:hover {
 
 .bk {
 	 box-shadow: 0 0px 4px rgba(0,0,0,.1);
+}
+.ln{
+	line-height: 1.5;
 }

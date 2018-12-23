@@ -1,17 +1,20 @@
 <script>
 	export default {
-		onLaunch: function () {
+		onLaunch: function() {
 			console.log('App Launch')
 		},
-		onShow: function () {
+		onShow: function() {
 			console.log('App Show')
 		},
-		onHide: function () {
+		onHide: function() {
 			console.log('App Hide')
 		}
 	}
 </script>
 
 <style>
-@import"static/css/base.css";
+	@import"static/css/base.css";
+	@import"static/css/iconfont.css";
+
+	@import"static/css/style.css";
 </style>

@@ -42,7 +42,7 @@
 		position: relative;
 	}
 	.df_fd_sdrert.act text{
-		padding-bottom: 26upx;
+		padding-bottom: 30upx;
 		color:#459FF7 ;
 		border-bottom: 1px solid #459FF7;
 	}
