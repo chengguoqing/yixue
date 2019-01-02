@@ -1,22 +1,29 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "slide-view",
-				"usingComponents": {
-					 "van-toast": "/wxcomponents/toast/index",
-					"van-row": "/wxcomponents/row/index",
-					"van-col": "/wxcomponents/col/index",
-					"van-button": "/wxcomponents/button/index"
-				}
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+    "pages" : [
+        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path" : "pages/user/denglu",
+            "style" : {
+                "navigationBarTitleText" : " ",
+				 "navigationBarBackgroundColor" : "#6F7BFF",
+				"backgroundColor" : "#6F7BFF"
+               
+            }
+        },{
+            "path" : "pages/index/index",
+            "style" : {
+                "navigationBarTitleText" : "slide-view",
+                "usingComponents" : {
+                  
+                }
+            }
+        }
+      
+    ],
+    "globalStyle" : {
+        "navigationBarTextStyle" : "black",
+        "navigationBarTitleText" : "uni-app",
+        "navigationBarBackgroundColor" : "#F8F8F8",
+        "backgroundColor" : "#F8F8F8"
+    }
 }
