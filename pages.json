@@ -2,6 +2,14 @@
     "pages" : [
         //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
         {
+            "path" : "pages/user/xiexi",
+            "style" : {
+                "navigationBarTitleText" : " ",
+        		 "navigationBarBackgroundColor" : "#6F7BFF",
+        		"backgroundColor" : "#6F7BFF"
+               
+            }
+        },{
             "path" : "pages/user/denglu",
             "style" : {
                 "navigationBarTitleText" : " ",

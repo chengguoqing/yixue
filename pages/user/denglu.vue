@@ -68,30 +68,39 @@
 
 
 					</view>
-			
 
-
-				<view class="sd_h_dertxrftyt box fz24">
-					<view class="box_b ye">
-						<image src="../../static/img/gandan.png" class="gantang_hao cz" mode=""></image>
-						<text class="ml10">登入失败，用户不存在</text>
+					<view class="cen" v-if="isd_df==2">
+						<image src="../../static/img/user_tou.png" class="user_tou_iconer"></image>
+						<view class="fz26 cf mt20">
+							刷下脸分析识别面部结构
+						</view>
+						<view class="fz28 cf mt20">
+							快速登录
+						</view>
 					</view>
-					<view class="box_a tr  cf">
-						忘记密码?
+
+
+					<view class="sd_h_dertxrftyt box fz24" v-if="isd_df!=2">
+						<view class="box_b ye">
+							<image src="../../static/img/gandan.png" class="gantang_hao cz" mode=""></image>
+							<text class="ml10">登入失败，用户不存在</text>
+						</view>
+						<view class="box_a tr  cf">
+							忘记密码?
+						</view>
+					</view>
+
+					<view class="" v-if="isd_df!=2">
+						<view class="sd_jh_dff yj4 ">
+							登录
+						</view>
+
+						<view class="sd_jh_dff yj4  ab mt20">
+							账号注 册
+						</view>
+
 					</view>
 				</view>
-
-				<view class="">
-					<view class="sd_jh_dff yj4 ">
-						登录
-					</view>
-
-					<view class="sd_jh_dff yj4  ab mt20">
-						账号注 册
-					</view>
-
-				</view>
-	</view>
 				<view class="dsf_jh_dert box cen">
 					<view class="box_a">
 						<image src="../../static/img/swdd_a.png" mode=""></image>
@@ -124,7 +133,7 @@
 	export default {
 		data() {
 			return {
-				isd_df: 1, //0 手机登录 1账号登录 2人脸识别
+				isd_df: 0, //0 手机登录 1账号登录 2人脸识别
 				tab_qe: [{
 					name: "手机登录",
 					class_e: "tl",
@@ -142,10 +151,11 @@
 		},
 		components: {},
 		methods: {
-			qiehuan(sd) {
+			qiehuan(sd,idx) {
 				this.tab_qe.map(a => {
 					a.cls = ""
 				})
+				this.isd_df=idx
 				sd.cls = "act"
 
 			}
@@ -206,11 +216,11 @@
 	.fg_hg_page {
 		width: 470upx;
 		margin: auto;
-		
+
 	}
-	.df_hh_box_ert{
-		min-height: 400upx;
-		border: 1px solid red;
+
+	.df_hh_box_ert {
+		min-height: 420upx;
 	}
 
 	.df_jh_drrttg {
@@ -292,5 +302,10 @@
 		width: 25upx;
 		height: 25upx;
 
+	}
+
+	.user_tou_iconer {
+		width: 211upx;
+		height: 193upx;
 	}
 </style>
