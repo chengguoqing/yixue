@@ -1,37 +1,67 @@
 {
-    "pages" : [
-        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-        {
-            "path" : "pages/user/xiexi",
-            "style" : {
-                "navigationBarTitleText" : " ",
-        		 "navigationBarBackgroundColor" : "#6F7BFF",
-        		"backgroundColor" : "#6F7BFF"
-               
-            }
-        },{
-            "path" : "pages/user/denglu",
-            "style" : {
-                "navigationBarTitleText" : " ",
-				 "navigationBarBackgroundColor" : "#6F7BFF",
-				"backgroundColor" : "#6F7BFF"
-               
-            }
-        },{
-            "path" : "pages/index/index",
-            "style" : {
-                "navigationBarTitleText" : "slide-view",
-                "usingComponents" : {
-                  
-                }
-            }
-        }
-      
-    ],
-    "globalStyle" : {
-        "navigationBarTextStyle" : "black",
-        "navigationBarTitleText" : "uni-app",
-        "navigationBarBackgroundColor" : "#F8F8F8",
-        "backgroundColor" : "#F8F8F8"
-    }
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/user/denglu",
+			"style": {
+				"navigationBarTitleText": " ",
+				"navigationBarBackgroundColor": "#6F7BFF",
+				"backgroundColor": "#6F7BFF"
+
+			}
+		}, {
+			"path": "pages/user/zhuce",
+			"style": {
+				"navigationBarTitleText": "用户注册"
+
+			}
+		}, {
+			"path": "pages/index",
+
+			"style": {
+				"navigationBarTitleText": "亿学实训平台",
+				"bz": "2.练考赛辅助系统APP-首页",
+				"app-plus": {
+					"bounce": "none", //关闭窗口回弹效果
+					"titleNView": {
+						"buttons": [ //原生标题栏按钮配置,
+							{
+								"text": "\ue623",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							},
+							{
+								"text": "\ue61c",
+								"fontSize": "22",
+								"float": "left",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+
+			}
+		}, {
+			"path": "pages/user/xiexi",
+			"style": {
+				"navigationBarTitleText": " ",
+				"navigationBarBackgroundColor": "#6F7BFF",
+				"backgroundColor": "#6F7BFF"
+
+			}
+		}, {
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "slide-view",
+				"usingComponents": {
+
+				}
+			}
+		}
+
+	],
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#6F7BFF",
+		"backgroundColor": "#6F7BFF"
+	}
 }

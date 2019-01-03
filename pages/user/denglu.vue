@@ -91,13 +91,14 @@
 					</view>
 
 					<view class="" v-if="isd_df!=2">
-						<view class="sd_jh_dff yj4 ">
+					
+						<navigator class="sd_jh_dff yj4 " url="/pages/index">
 							登录
-						</view>
+						</navigator>
 
-						<view class="sd_jh_dff yj4  ab mt20">
-							账号注 册
-						</view>
+					
+						
+						<navigator class="sd_jh_dff yj4  ab mt20" url="/pages/user/zhuce">账号注册</navigator>
 
 					</view>
 				</view>
@@ -118,7 +119,8 @@
 
 			</view>
 			<view class="cen fz24 mt40 cf">
-				注册/登入即表示你已阅，并同意 <text style="color: #4ee7c8;">《用户协议》</text>
+			
+				注册/登入即表示你已阅，并同意 <navigator class="f_b" style="color: #4ee7c8;" url="/pages/user/xiexi">《用户协议》</navigator>
 			</view>
 
 		</view>
@@ -188,11 +190,7 @@
 		z-index: 2;
 	}
 
-	.logo_kh_drt {
-		width: 100upx;
-		height: 100upx;
-
-	}
+	
 
 	.sd_jh_dert {
 		border-top: 1px solid #fff;
@@ -223,19 +221,7 @@
 		min-height: 420upx;
 	}
 
-	.df_jh_drrttg {
-		height: 70upx;
-		border-bottom: 1px solid #fff;
-		position: relative;
-	}
 
-	.df_jh_drrttg input {
-		font-size: 28upx;
-		color: #fff;
-		padding-left: 80upx !important;
-		position: relative;
-		top: 8upx;
-	}
 
 	.sd_jh_drttx {
 		width: 80upx;
@@ -253,14 +239,7 @@
 		margin-top: 20upx;
 	}
 
-	.df_hg_ghuoq {
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 100;
-		height: 70upx;
-		line-height: 70upx;
-	}
+
 
 	.sd_jh_drtycx.ab {
 		width: 28upx;

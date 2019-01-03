@@ -4,14 +4,14 @@
 
 		</view>
 
-		<view class="pr pd">
-			<view class="pt50 yj4 bgff">
+		<view class="pr pd pt100">
+			<view class=" yj4 bgff btm pm50">
 				<view class="cen sd_jh_Dertxrt cen">
 					<view class="ddf_jh_jh_e fz32 cf">
 						用户协议及隐私政策
 					</view>
 				</view>
-					<view class="fz26 z3 pd">
+					<view class="fz26 z6 ln pd">
 						<view class="dsf_jh_drt">
 							厦门亿学软件有限公司（以下简称“亿学软件”）及其产品亿学实训平台提醒您：在您使用亿学实训平台的各项服务前，请您务必仔细阅读并透彻理解本声明。如果您使用亿学实训平台，您的使用行为将被视为对本声明全部内容的认可。
 						</view>
@@ -61,6 +61,7 @@
 	}
 
 	.sd_jh_Dertxrt {
+		height: 94upx;
 		margin-top: -47upx;
 	}
 	.dsf_jh_drt{
@@ -75,7 +76,6 @@
 		background: #2EB1D9;
 		margin: auto;
 		display: inline-block;
-
 		line-height: 94upx;
 	}
 </style>
