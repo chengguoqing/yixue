@@ -68,8 +68,7 @@
 
 
 					</view>
-
-					<view class="cen" v-if="isd_df==2">
+					<navigator class="cen" v-if="isd_df==2" url="/pages/user/face_login">
 						<image src="../../static/img/user_tou.png" class="user_tou_iconer"></image>
 						<view class="fz26 cf mt20">
 							刷下脸分析识别面部结构
@@ -77,7 +76,7 @@
 						<view class="fz28 cf mt20">
 							快速登录
 						</view>
-					</view>
+					</navigator>
 
 
 					<view class="sd_h_dertxrftyt box fz24" v-if="isd_df!=2">
@@ -194,7 +193,7 @@
 
 	.sd_jh_dert {
 		border-top: 1px solid #fff;
-		margin-top: 120upx;
+		margin-top: 90upx;
 	}
 
 	.sd_jh_derertx {

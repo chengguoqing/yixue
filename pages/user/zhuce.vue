@@ -122,6 +122,7 @@
 
 	.df_jh_drrttg input {
 		top: 14upx;
+		color: #333 !important;
 	}
 
 	.dsf_jj_drert {

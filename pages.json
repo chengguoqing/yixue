@@ -2,29 +2,58 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/user/denglu",
+			"path": "pages/user/school_name",
 			"style": {
-				"navigationBarTitleText": " ",
-				"navigationBarBackgroundColor": "#6F7BFF",
-				"backgroundColor": "#6F7BFF"
-
+				"navigationBarTitleText": "院校名称",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black"
 			}
 		}, {
+			"path": "pages/user/improve_information",
+			"style": {
+				"navigationBarTitleText": "完善基本信息",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black",
+				"usingComponents": {
+					"van-popup": "/wxcomponents/popup/index",
+					"van-area": "/wxcomponents/area/index"
+				}
+			}
+		}, {
+			"path": "pages/user/denglu",
+			"style": {
+				"navigationBarTitleText": " "
+			}
+		}, {
+			"path": "pages/user/face_login",
+			"style": {
+				"navigationBarTitleText": "人脸识别登录",
+				"app-plus": {
+					"bounce": "none", //关闭窗口回弹效果
+					"scrollIndicator": "none"
+
+				}
+
+			}
+		},
+		{
 			"path": "pages/user/zhuce",
 			"style": {
 				"navigationBarTitleText": "用户注册"
-
 			}
-		}, {
+		},
+		{
 			"path": "pages/index",
-
 			"style": {
 				"navigationBarTitleText": "亿学实训平台",
 				"bz": "2.练考赛辅助系统APP-首页",
 				"app-plus": {
 					"bounce": "none", //关闭窗口回弹效果
 					"titleNView": {
-						"buttons": [ //原生标题栏按钮配置,
+						"buttons": [
+							//原生标题栏按钮配置,
 							{
 								"text": "\ue623",
 								"fontSize": "24",
@@ -39,26 +68,23 @@
 						]
 					}
 				}
-
 			}
-		}, {
+		},
+		{
 			"path": "pages/user/xiexi",
 			"style": {
 				"navigationBarTitleText": " ",
 				"navigationBarBackgroundColor": "#6F7BFF",
 				"backgroundColor": "#6F7BFF"
-
 			}
-		}, {
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "slide-view",
-				"usingComponents": {
-
-				}
+				"usingComponents": {}
 			}
 		}
-
 	],
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#6F7BFF",

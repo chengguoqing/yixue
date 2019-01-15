@@ -1,30 +1,42 @@
-page{
+page {
 	background: #F1F2FF;
 }
+
 .logo_kh_drt {
 	width: 100upx;
 	height: 100upx;
 
 }
-	.df_jh_drrttg {
-		height: 70upx;
-		border-bottom: 1px solid #fff;
-		position: relative;
-	}
 
-	.df_jh_drrttg input {
-		font-size: 28upx;
-		color: #fff;
-		padding-left: 80upx !important;
-		position: relative;
-		top: 8upx;
-	}
-	
-		.df_hg_ghuoq {
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 100;
-		height: 70upx;
-		line-height: 70upx;
-	}
+.df_jh_drrttg {
+	height: 70upx;
+	border-bottom: 1px solid #fff;
+	position: relative;
+}
+
+.df_jh_drrttg input {
+	font-size: 28upx;
+	color: #fff;
+	padding-left: 80upx !important;
+	position: relative;
+	top: 8upx;
+}
+
+.df_hg_ghuoq {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	height: 70upx;
+	line-height: 70upx;
+}
+.dx_btn{
+	line-height: 90upx;
+	height: 90upx;
+	border-radius: 90upx;
+	width: 100%;
+	text-align: center;
+	background: #727EFF;
+	font-size: 30upx;
+	color: #fff;
+}
