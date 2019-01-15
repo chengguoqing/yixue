@@ -96,13 +96,20 @@
 				}]
 			};
 		},
-			methods: {
-			qiehuan(sd){
-				this.sd_jhcd.map(a=>{
-					a.cls=""
+		onNavigationBarButtonTap(e) {
+			if (e.index == 1) {
+				uni.navigateTo({
+					url: '/pages/user/user_center'
+				});
+			}
+		},
+		methods: {
+			qiehuan(sd) {
+				this.sd_jhcd.map(a => {
+					a.cls = ""
 				})
-				sd.cls="act"
-				
+				sd.cls = "act"
+
 			}
 		}
 	}

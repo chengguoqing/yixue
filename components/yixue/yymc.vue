@@ -1,5 +1,5 @@
 <template>
-	<view class=" pt40">
+	<view class=" pt40 fg_df_dertx">
 
 		<scroll-view class="scroll-view_H" scroll-y="true" :scroll-into-view="sd_dfrtyxc">
 			<view class="pl40 pr40">
@@ -60,9 +60,7 @@
 				});
 			},
 			tiao_d() {
-				uni.redirectTo({
-					url: '/pages/user/improve_information'
-				});
+					this.$emit('close_d')
 			}
 
 		},
@@ -101,5 +99,8 @@
 		z-index: 1000;
 		width: 60upx;
 
+	}
+	.fg_df_dertx{
+		background: #FCFCFF;
 	}
 </style>

@@ -58,7 +58,7 @@
 			<image src="../../static/img/right_icon.png" class="right_iconset" mode=""></image>
 		</view>
 
-		<view class="sd_jhg_ddrtt bgff dx_row fz30 mt20 ab ">
+		<view class="sd_jhg_ddrtt bgff dx_row fz30 mt20 ab " @tap="is_seert_r=true">
 			<view class="dx_col_12">
 				院校名称
 			</view>
@@ -131,9 +131,8 @@
 
 
 		<view class="mt50">
-			<view class="dx_btn">
-				保存
-			</view>
+			
+			<navigator url="/pages/index"  open-type="reLaunch" class="dx_btn">保存</navigator>
 		</view>
 
 
@@ -141,22 +140,29 @@
 		<van-popup :show="is_seert" @close="onClose"  position="bottom">
 			<van-area :area-list=" areaList " columns-num="2" title="请选择地区"  @cancel="onClose" @confirm="wacse_eert"/>
 		</van-popup>
+		
+		
+		<van-popup :show="is_seert_r"   position="right">
+			<yymc @close_d="is_seert_r=false"></yymc>
+		</van-popup>
 	</view>
 </template>
 <script>
 	import areaList from "@/static/js/city.data.js"
+	import yymc from"@/components/yixue/yymc.vue"
 	export default {
 		data() {
 			return {
 				array: ['男', '女'],
 				index: 0,
+				is_seert_r:false,
 				areaList: [],
 				is_seert:false,
 				sdh_ed:"福建 厦门"
 			}
 		},
 		components: {
-
+			yymc
 		},
 		methods: {
 			bindPickerChange: function(e) {
@@ -176,22 +182,7 @@
 	}
 </script>
 <style scoped>
-	.unfo_drrtxc,
-	.sd_jhg_ddrtt {
-		padding-left: 40upx;
-		padding-right: 40upx;
-	}
-
-	.sd_jhg_ddrtt {
-		line-height: 120upx;
-		color: #808080;
-		position: relative;
-	}
-
-	.sd_jhg_ddrtt.ab {
-		padding-right: 60upx;
-		line-height: 90upx;
-	}
+	
 
 	.user_ixdrt {
 		width: 78upx;
@@ -203,11 +194,5 @@
 		margin-top: 24upx;
 	}
 
-	.right_iconset {
-		width: 11upx;
-		height: 18upx;
-		position: absolute;
-		right: 20upx;
-		top: 38upx;
-	}
+	
 </style>

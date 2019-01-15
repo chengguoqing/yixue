@@ -91,7 +91,7 @@
 
 					<view class="" v-if="isd_df!=2">
 					
-						<navigator class="sd_jh_dff yj4 " url="/pages/index">
+						<navigator class="sd_jh_dff yj4 " url="/pages/user/improve_information">
 							登录
 						</navigator>
 
