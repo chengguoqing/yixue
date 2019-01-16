@@ -15,9 +15,49 @@
 				"navigationBarTitleText": "个人中心",
 				"navigationBarBackgroundColor": "#fff",
 				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black",
+				"usingComponents": {
+					"van-popup": "/wxcomponents/popup/index"
+				}
+			}
+		},{
+			"path": "pages/user/About_Us",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black"
+			}
+		},{
+			"path": "pages/user/usinghelp",
+			"style": {
+				"navigationBarTitleText": "使用帮助",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black"
+			}
+		},{
+			"path": "pages/user/feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff",
 				"navigationBarTextStyle": "black"
 			}
 		}, {
+			"path": "pages/user/message_center",
+			"style": {
+				"navigationBarTitleText": "消息中心",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black",
+				"usingComponents": {
+					"van-swipe-cell": "/wxcomponents/swipe-cell/index",
+					"van-cell": "/wxcomponents/cell/index",
+					"van-cell-group": "/wxcomponents/cell-group/index"
+				}
+			}
+		},  {
 			"path": "pages/user/used_settings",
 			"style": {
 				"navigationBarTitleText": "常用设置",
@@ -44,7 +84,7 @@
 					"van-popup": "/wxcomponents/popup/index"
 				}
 			}
-		},  {
+		}, {
 			"path": "pages/user/improve_information",
 			"style": {
 				"navigationBarTitleText": "完善基本信息",

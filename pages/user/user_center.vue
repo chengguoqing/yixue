@@ -39,7 +39,7 @@
 
 
 
-			<navigator url="" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
+			<navigator url="/pages/user/message_center" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
 				<view class="sd_jh_dertx cen h100 f_b ab">
 					<image src="../../static/img/dsfs_b.png" class="cz"></image>
 				</view>
@@ -51,7 +51,7 @@
 
 
 
-			<navigator url="" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
+			<navigator url="/pages/user/feedback" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
 				<view class="sd_jh_dertx cen h100 f_b ac">
 					<image src="../../static/img/dsfs_c.png" class="cz"></image>
 				</view>
@@ -61,7 +61,7 @@
 				<image src="../../static/img/dsfs_g.png" class="rihg_deert"></image>
 			</navigator>
 
-			<navigator url="" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
+			<navigator url="/pages/user/usinghelp" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
 				<view class="sd_jh_dertx cen h100 f_b ad">
 					<image src="../../static/img/dsfs_d.png" class="cz"></image>
 				</view>
@@ -72,7 +72,7 @@
 			</navigator>
 
 
-			<navigator url="" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
+			<view @tap="is_seert=true" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
 				<view class="sd_jh_dertx cen h100 f_b ae">
 					<image src="../../static/img/dsfs_e.png" class="cz"></image>
 				</view>
@@ -80,11 +80,11 @@
 					分享APP
 				</view>
 				<image src="../../static/img/dsfs_g.png" class="rihg_deert"></image>
-			</navigator>
+			</view>
 
 
 
-			<navigator url="" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
+			<navigator url="/pages/user/About_Us" class="mb10 yj4 bgff pl20 pr40 dsf_jh_dertyct pr">
 				<view class="sd_jh_dertx cen h100 f_b af">
 					<image src="../../static/img/dsfs_f.png" class="cz"></image>
 				</view>
@@ -109,17 +109,22 @@
 
 		</view>
 
+
+		<van-popup :show="is_seert" @close="is_seert=false" position="bottom">
+				<fenxiang @close="is_seert=false"></fenxiang>
+		</van-popup>
 	</view>
 </template>
 <script>
+	import fenxiang from "@/components/yixue/fenxiang.vue"
 	export default {
 		data() {
 			return {
-
+				is_seert: false
 			}
 		},
 		components: {
-
+			fenxiang
 		},
 		methods: {
 
