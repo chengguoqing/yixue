@@ -101,6 +101,10 @@
 				uni.navigateTo({
 					url: '/pages/user/user_center'
 				});
+			}else{
+					uni.navigateTo({
+					url: '/pages/user/message_center'
+				});
 			}
 		},
 		methods: {

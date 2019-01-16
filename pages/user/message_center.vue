@@ -5,7 +5,7 @@
 		<van-swipe-cell right-width="65" v-for="(sd,idx) in sd_ddfg">
 
 			<van-cell-group>
-				<van-cell is-link :title="'福建省2018年度“亿学杯”商务英语技能大赛开启'+idx" />
+				<van-cell is-link :title="'福建省2018年度“亿学杯”商务英语技能大赛开启'+idx" class="dian" />
 			</van-cell-group>
 			<view slot="right" class="jhg_dertxc" @tap="sanhg_drt(idx)">删除</view>
 		</van-swipe-cell>
