@@ -11,7 +11,8 @@
 
 
 			<view class="sd_ul">
-				<view class="sdd_li bgff   pt20 pm20 ov" v-for="sd in 2">
+			
+				<navigator class="sdd_li bgff   pt20 pm20 ov" v-for="sd in 2" open-type="switchTab" url="/pages/practice/index">
 					<view class="sd_jYbgdsr">
 
 					</view>
@@ -36,7 +37,7 @@
 						</view>
 
 					</view>
-				</view>
+				</navigator>
 
 
 

@@ -2,6 +2,14 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/user/denglu",
+			"style": {
+				"navigationBarTitleText": " ",
+				"app-plus": {
+					"bounce": "none" //关闭窗口回弹效果
+				}
+			}
+		}, {
 			"path": "pages/practice/index",
 			"style": {
 				"navigationBarTitleText": "商务英语练考赛一体化平台",
@@ -19,11 +27,30 @@
 				}
 			}
 		}, {
-			"path": "pages/user/denglu",
+			"path": "pages/performance/index",
 			"style": {
-				"navigationBarTitleText": " ",
+
+			}
+		}, {
+			"path": "pages/user/index",
+			"style": {
+
+			}
+		}, {
+			"path": "pages/independent_study/index",
+			"style": {
+				"navigationBarTitleText": "自主学习",
 				"app-plus": {
-					"bounce": "none" //关闭窗口回弹效果
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue60c",
+								"fontSize": "20",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
 				}
 			}
 		}, {
@@ -169,8 +196,8 @@
 			"path": "pages/user/xiexi",
 			"style": {
 				"navigationBarTitleText": " ",
-				"navigationBarBackgroundColor": "#6F7BFF",
-				"backgroundColor": "#6F7BFF"
+				"navigationBarBackgroundColor": "#6A7BFF",
+				"backgroundColor": "#6A7BFF"
 			}
 		},
 		{
@@ -181,8 +208,38 @@
 			}
 		}
 	],
+ 
+	"tabBar": {
+		"color": "#7C7C7C",
+		"selectedColor": "#5b64fd",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/practice/index",
+			"iconPath": "static/img/dibu/ddfd_a_a.png",
+			"selectedIconPath": "static/img/dibu/ddfd_b_a.png",
+			"text": "练一练"
+		}, {
+			"pagePath": "pages/independent_study/index",
+			"iconPath": "static/img/dibu/ddfd_a_b.png",
+			"selectedIconPath": "static/img/dibu/ddfd_b_b.png",
+			"text": "自主学习" 
+		}, {
+			"pagePath": "pages/performance/index",
+			"iconPath": "static/img/dibu/ddfd_a_c.png",
+			"selectedIconPath": "static/img/dibu/ddfd_a_c.png",
+			"text": "成绩  排行"
+		}, {
+			"pagePath": "pages/user/index",
+			"iconPath": "static/img/dibu/ddfd_a_d.png",
+			"selectedIconPath": "static/img/dibu/ddfd_a_d.png",
+			"text": "个人中心"
+		}]
+	},
+ 
+
 	"globalStyle": {
-		"navigationBarBackgroundColor": "#6F7BFF",
-		"backgroundColor": "#6F7BFF"
+		"navigationBarBackgroundColor": "#6A7BFF",
+		"backgroundColor": "#6A7BFF"
 	}
 }
