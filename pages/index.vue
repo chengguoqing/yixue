@@ -124,31 +124,8 @@
 		background: #EAEBFA;
 	}
 
-	.dfs_jh_deret {
-		padding-left: 45upx;
-		padding-right: 45upx;
-	}
+	
 
-	.sd_jhh_drert_row {
-		background: #B2B3F9;
-		line-height: 72upx;
-		height: 72upx;
-
-		border-radius: 72upx;
-	}
-
-	.sd_jhh_drert_col {
-		color: #fff;
-		text-align: center;
-		font-size: 28upx;
-
-	}
-
-	.sd_jhh_drert_col.act {
-		color: #B2B3F9;
-		background: #fff;
-		border-radius: 72upx;
-	}
 
 	.uamjjimder {
 		width: 30upx;

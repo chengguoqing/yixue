@@ -2,6 +2,23 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/practice/index",
+			"style": {
+				"navigationBarTitleText": "商务英语练考赛一体化平台",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue623",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		}, {
 			"path": "pages/user/denglu",
 			"style": {
 				"navigationBarTitleText": " ",
@@ -9,7 +26,7 @@
 					"bounce": "none" //关闭窗口回弹效果
 				}
 			}
-		},{
+		}, {
 			"path": "pages/user/user_center",
 			"style": {
 				"navigationBarTitleText": "个人中心",
@@ -20,7 +37,7 @@
 					"van-popup": "/wxcomponents/popup/index"
 				}
 			}
-		},{
+		}, {
 			"path": "pages/user/About_Us",
 			"style": {
 				"navigationBarTitleText": "关于我们",
@@ -28,7 +45,7 @@
 				"backgroundColor": "#fff",
 				"navigationBarTextStyle": "black"
 			}
-		},{
+		}, {
 			"path": "pages/user/usinghelp",
 			"style": {
 				"navigationBarTitleText": "使用帮助",
@@ -36,7 +53,7 @@
 				"backgroundColor": "#fff",
 				"navigationBarTextStyle": "black"
 			}
-		},{
+		}, {
 			"path": "pages/user/feedback",
 			"style": {
 				"navigationBarTitleText": "意见反馈",
@@ -57,7 +74,7 @@
 					"van-cell-group": "/wxcomponents/cell-group/index"
 				}
 			}
-		},  {
+		}, {
 			"path": "pages/user/used_settings",
 			"style": {
 				"navigationBarTitleText": "常用设置",
