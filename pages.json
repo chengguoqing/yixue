@@ -2,12 +2,17 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/performance/index",
+			"style": {
+				"navigationBarTitleText": " "
+			}
+		}, {
 			"path": "pages/independent_study/index",
 			"style": {
 				"navigationBarTitleText": "自主学习",
 				"app-plus": {
 					"titleNView": {
-						"buttons": [ 
+						"buttons": [
 							//原生标题栏按钮配置,
 							{
 								"text": "\ue60c",
@@ -18,7 +23,7 @@
 					}
 				}
 			}
-		},{
+		}, {
 			"path": "pages/user/denglu",
 			"style": {
 				"navigationBarTitleText": " ",
@@ -44,16 +49,11 @@
 				}
 			}
 		}, {
-			"path": "pages/performance/index",
-			"style": {
-
-			}
-		}, {
 			"path": "pages/user/index",
 			"style": {
 
 			}
-		},  {
+		}, {
 			"path": "pages/user/user_center",
 			"style": {
 				"navigationBarTitleText": "个人中心",
@@ -208,7 +208,7 @@
 			}
 		}
 	],
- 
+
 	"tabBar": {
 		"color": "#7C7C7C",
 		"selectedColor": "#5b64fd",
@@ -223,11 +223,11 @@
 			"pagePath": "pages/independent_study/index",
 			"iconPath": "static/img/dibu/ddfd_a_b.png",
 			"selectedIconPath": "static/img/dibu/ddfd_b_b.png",
-			"text": "自主学习" 
+			"text": "自主学习"
 		}, {
 			"pagePath": "pages/performance/index",
 			"iconPath": "static/img/dibu/ddfd_a_c.png",
-			"selectedIconPath": "static/img/dibu/ddfd_a_c.png",
+			"selectedIconPath": "static/img/dibu/ddfd_b_c.png",
 			"text": "成绩  排行"
 		}, {
 			"pagePath": "pages/user/index",
@@ -236,7 +236,7 @@
 			"text": "个人中心"
 		}]
 	},
- 
+
 
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#6A7BFF",

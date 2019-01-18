@@ -21,6 +21,11 @@
 							<view class="dx_col_17">
 								<view class="sd_jh_ddfgxd pr br">
 
+									<picker mode="date" :value="date" @change="bindDateChange">
+										<view class="uni-input fz26 z6 tl ml20">{{date}}</view>
+									</picker>
+
+
 									<image src="../../static/img/time_icon.png" class="time_icon"></image>
 								</view>
 							</view>
@@ -33,7 +38,9 @@
 							</view>
 							<view class="dx_col_17">
 								<view class="sd_jh_ddfgxd pr br">
-
+									<picker mode="date" :value="date" @change="bindDateChange">
+										<view class="uni-input fz26 z6 tl ml20">{{date}}</view>
+									</picker>
 									<image src="../../static/img/time_icon.png" class="time_icon"></image>
 								</view>
 							</view>
@@ -41,7 +48,7 @@
 
 						<view class="ls fz28 mt30 tl pl70">
 							学习目标：每日完成
-							<view class="sd_jh_dffr f_b">
+							<view class="sd_jh_dffr f_b cz">
 								<input type="number" value="30" class=" br" />
 							</view>
 							题
@@ -107,7 +114,16 @@
 	export default {
 		data() {
 			return {
-				view: ""
+				view: "",
+				date: "2019-1-18"
+			}
+		},
+		computed: {
+			startDate() {
+				return this.getDate('start');
+			},
+			endDate() {
+				return this.getDate('end');
 			}
 		},
 		components: {
@@ -117,6 +133,24 @@
 			close_sdf() {
 				this.view.close();
 				this.$emit('close')
+			},
+			bindDateChange: function(e) {
+				this.date = e.target.value
+			},
+			getDate(type) {
+				const date = new Date();
+				let year = date.getFullYear();
+				let month = date.getMonth() + 1;
+				let day = date.getDate();
+
+				if (type === 'start') {
+					year = year - 60;
+				} else if (type === 'end') {
+					year = year + 2;
+				}
+				month = month > 9 ? month : '0' + month;;
+				day = day > 9 ? day : '0' + day;
+				return `${year}-${month}-${day}`;
 			}
 		},
 
