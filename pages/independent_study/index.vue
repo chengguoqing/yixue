@@ -68,13 +68,19 @@
 								今日完成
 							</view>
 						</view>
-						<view class="dx_row mt20 fz26">
-							<view class="   fg_jh_dertxr dx_col_12">
-								正确15
-							</view>
-							<view class="ye dx_col_12 fz26">
-								错误15
-							</view>
+
+						<view class="qc">
+
+						</view>
+						<view class=" fz26 mt20 fg_jh_dertxr">
+							正确15
+						</view>
+
+						<view class=" fz26 mt20 fg_jh_dertxr ye">
+							错误15
+						</view>
+						<view class="qc">
+
 						</view>
 
 
@@ -96,14 +102,20 @@
 								今日完成
 							</view>
 						</view>
-						<view class="dx_row mt20 fz26">
-							<view class="   fg_jh_dertxr dx_col_12">
-								正确15
-							</view>
-							<view class="ye dx_col_12 fz26">
-								错误15
-							</view>
+						<view class="qc">
+
 						</view>
+						<view class=" fz26 mt20 fg_jh_dertxr">
+							正确15
+						</view>
+
+						<view class=" fz26 mt20 fg_jh_dertxr ye">
+							错误15
+						</view>
+						<view class="qc">
+
+						</view>
+
 					</view>
 					<view class="fz28 cen z3 mt30">
 						11月5日
@@ -113,17 +125,23 @@
 			</view>
 
 		</view>
+
+		<zizhu_pup v-if="sd_khdf" @close="sd_khdf=false"></zizhu_pup>
 	</view>
 </template>
 <script>
+	import zizhu_pup from "@/components/yixue/zizhu_pup.vue"
 	export default {
 		data() {
 			return {
-
+				sd_khdf: false
 			}
 		},
 		components: {
-
+			zizhu_pup
+		},
+		onNavigationBarButtonTap(e) {
+			this.sd_khdf=true
 		},
 		methods: {
 
@@ -159,12 +177,12 @@
 		margin: auto;
 		position: relative;
 		text-align: center;
-		padding-top: 40upx;
+		padding-top: 30upx;
 	}
 
 	.sd_j_xer_kmd {
-		width: 110upx;
-		height: 110upx;
+		width: 120upx;
+		height: 120upx;
 		border-radius: 50%;
 		background: #45C8ED;
 		color: #fff;
@@ -198,5 +216,7 @@
 
 	.sd_jh_drt_drrtx.ac .fg_jh_dertxr {
 		color: #7988FF;
+		float: left;
+		width: 50%;
 	}
 </style>

@@ -2,6 +2,23 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/independent_study/index",
+			"style": {
+				"navigationBarTitleText": "自主学习",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [ 
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue60c",
+								"fontSize": "20",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
 			"path": "pages/user/denglu",
 			"style": {
 				"navigationBarTitleText": " ",
@@ -36,24 +53,7 @@
 			"style": {
 
 			}
-		}, {
-			"path": "pages/independent_study/index",
-			"style": {
-				"navigationBarTitleText": "自主学习",
-				"app-plus": {
-					"titleNView": {
-						"buttons": [
-							//原生标题栏按钮配置,
-							{
-								"text": "\ue60c",
-								"fontSize": "20",
-								"fontSrc": "static/fonts/iconfont.ttf"
-							}
-						]
-					}
-				}
-			}
-		}, {
+		},  {
 			"path": "pages/user/user_center",
 			"style": {
 				"navigationBarTitleText": "个人中心",
