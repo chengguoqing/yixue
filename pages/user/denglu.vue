@@ -90,13 +90,13 @@
 					</view>
 
 					<view class="" v-if="isd_df!=2">
-					
+
 						<navigator class="sd_jh_dff yj4 " url="/pages/user/improve_information">
 							登录
 						</navigator>
 
-					
-						
+
+
 						<navigator class="sd_jh_dff yj4  ab mt20" url="/pages/user/zhuce">账号注册</navigator>
 
 					</view>
@@ -118,7 +118,7 @@
 
 			</view>
 			<view class="cen fz24 mt40 cf">
-			
+
 				注册/登入即表示你已阅，并同意 <navigator class="f_b" style="color: #4ee7c8;" url="/pages/user/xiexi">《用户协议》</navigator>
 			</view>
 
@@ -152,17 +152,21 @@
 		},
 		components: {},
 		methods: {
-			qiehuan(sd,idx) {
-				this.tab_qe.map(a => {
+			qiehuan(sd, idx) {
+				this.tab_qe.map(a => { 
 					a.cls = ""
 				})
-				this.isd_df=idx
+				this.isd_df = idx
 				sd.cls = "act"
 
-			}
+			} 
 		},
-		mounted() {},
-	}
+		mounted() { 
+// 			console.log(2222)
+// 			var info = plus.push.getClientInfo(); 
+// 			console.log(JSON.stringify(info))
+		},
+	} 
 </script>
 <style scoped>
 	.sd_h_dertxrftyt {
@@ -189,7 +193,7 @@
 		z-index: 2;
 	}
 
-	
+
 
 	.sd_jh_dert {
 		border-top: 1px solid #fff;

@@ -90,8 +90,12 @@ page {
 	font-size: 28upx;
 
 }
-	.sd_jhh_drert_col.act {
-		color: #B2B3F9;
-		background: #fff;
-		border-radius: 72upx;
-	}
+
+.sd_jhh_drert_col.act {
+	color: #B2B3F9;
+	background: #fff;
+	border-radius: 72upx;
+}
+.yj8{
+	border-radius: 16upx;
+}

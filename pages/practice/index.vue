@@ -77,7 +77,7 @@
 
 
 			</view>
-
+ 
 
 
 			<view class="dx_row df_df_row" v-if="idx_ddf==1">

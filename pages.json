@@ -2,6 +2,30 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/user/denglu",
+			"style": {
+				"navigationBarTitleText": " ",
+				"app-plus": {
+					"bounce": "none" //关闭窗口回弹效果
+				}
+			}
+		},{
+			"path": "pages/user/cidian",
+			"style": {
+				"navigationBarTitleText": "词典",
+				"usingComponents": {
+						"van-swipe-cell": "/wxcomponents/swipe-cell/index"
+				}
+			}
+		}, {
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"usingComponents": {
+					"van-popup": "/wxcomponents/popup/index"
+				}
+			}
+		}, {
 			"path": "pages/performance/index",
 			"style": {
 				"navigationBarTitleText": " "
@@ -24,14 +48,6 @@
 				}
 			}
 		}, {
-			"path": "pages/user/denglu",
-			"style": {
-				"navigationBarTitleText": " ",
-				"app-plus": {
-					"bounce": "none" //关闭窗口回弹效果
-				}
-			}
-		}, {
 			"path": "pages/practice/index",
 			"style": {
 				"navigationBarTitleText": "商务英语练考赛一体化平台",
@@ -47,11 +63,6 @@
 						]
 					}
 				}
-			}
-		}, {
-			"path": "pages/user/index",
-			"style": {
-
 			}
 		}, {
 			"path": "pages/user/user_center",
@@ -232,7 +243,7 @@
 		}, {
 			"pagePath": "pages/user/index",
 			"iconPath": "static/img/dibu/ddfd_a_d.png",
-			"selectedIconPath": "static/img/dibu/ddfd_a_d.png",
+			"selectedIconPath": "static/img/dibu/ddfd_b_d.png",
 			"text": "个人中心"
 		}]
 	},
