@@ -10,7 +10,8 @@
 			</view>
 
 			<view class="box cen">
-				<view class="box_a">
+		
+				<navigator class="box_a" url="/pages/performance/record_details">
 					<view class="qsd_dxcrtxet">
 						<image src="../../static/img/linhg_a.png" class="linhg_a cz"></image>
 					</view>
@@ -21,10 +22,10 @@
 					<view class="fz26 z3 mt10">
 						22
 					</view>
-				</view>
+				</navigator>
 
 
-				<view class="box_a">
+				<navigator class="box_a"  url="/pages/performance/record_details">
 					<view class="qsd_dxcrtxet">
 						<image src="../../static/img/linhg_b.png" class="linhg_a ab cz"></image>
 					</view>
@@ -35,10 +36,10 @@
 					<view class="fz26 z3 mt10">
 						22
 					</view>
-				</view>
+				</navigator>
 
 
-				<view class="box_a">
+				<navigator class="box_a"  url="/pages/performance/record_details">
 					<view class="qsd_dxcrtxet">
 						<image src="../../static/img/linhg_c.png" class="linhg_a ac cz"></image>
 					</view>
@@ -49,7 +50,7 @@
 					<view class="fz26 z3 mt10">
 						22
 					</view>
-				</view>
+				</navigator>
 
 
 
@@ -60,7 +61,7 @@
 				<text class=" ls cz ml10">您的历史最高成绩 </text>
 				<text class="red">90</text> 分
 				<text class="ml20 red">1000</text> 名
-				<navigator url="" class="qug_deertxc fz24 cf ml20">去竞赛</navigator>
+				<navigator url="/pages/performance/pk" class="qug_deertxc fz24 cf ml20">去竞赛</navigator>
 			</view>
 
 
@@ -87,7 +88,7 @@
 				<image src="../../static/img/tubiao_s.png" class="w100" mode="widthFix"></image>
 			</view>
 
-		</view>
+		</view> 
 
 
 
@@ -132,11 +133,28 @@
 <script>
 	export default {
 		data() {
-			return {}
+			return {
+				sd_ddffdf: [{
+					cls: "",
+					type: 0
+				}, {
+					cls: "",
+					type: 0
+				}, {
+					cls: "",
+					type: 1
+				}, {
+					cls: "",
+					type: 0
+				}, {
+					cls: "",
+					type: 1
+				}]
+			}
 		},
 		components: {},
 		methods: {
-			sd_xddfff(sd) {
+			sd_xddfff(sd) { 
 				this.sd_ddffdf.map(a => {
 					a.cls = ""
 				})
@@ -162,63 +180,4 @@
 		box-shadow: 0 0 10upx rgba(0, 0, 0, .2);
 	}
 
-	.linhg_a {
-		width: 40upx;
-		height: 45upx;
-	}
-
-	.linhg_a.ab {
-		width: 62upx;
-		height: 52upx;
-	}
-
-	.linhg_a.ac {
-		width: 54upx;
-		height: 50upx;
-	}
-
-	.qsd_dxcrtxet {
-		height: 55upx;
-		line-height: 55upx;
-	}
-
-	.wsd_jh_dee {
-		width: 28upx;
-		height: 35upx;
-	}
-
-	.qug_deertxc {
-		display: inline-block;
-		width: 87upx;
-		height: 40upx;
-		text-align: center;
-		line-height: 40upx;
-		background: #667AFF;
-		border-radius: 40upx;
-	}
-
-	.wsiu_ddrertxc {
-		width: 60upx;
-		height: 30upx;
-		border-radius: 30upx;
-		text-align: center;
-		line-height: 30upx;
-		color: #fff;
-		background: #F3AE2F;
-		display: inline-block;
-	}
-
-	.df_jh_ddfrrtxc {
-		line-height: 30upx;
-	}
-
-	.down_eerrq {
-		width: 22upx;
-		height: 13upx;
-	}
-
-	.meiyoushuju {
-		width: 269upx;
-		height: 53upx;
-	}
 </style>

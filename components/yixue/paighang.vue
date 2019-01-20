@@ -2,7 +2,7 @@
 <template>
 	<view class=" pt10">
 		<view class="box cen">
-			<view class="box_a dsf_jh_defgx" :class="sd.cls" v-for="sd in sd_jhdf_d">
+			<view class="box_a dsf_jh_defgx" :class="sd.cls" v-for="(sd,idx) in sd_jhdf_d">
 				{{sd.name}}
 			</view>
 		</view>
@@ -16,7 +16,7 @@
 				</view>
 			</view>
 
-			<view class="dx_row dfs_jhjeertt pt20 pm20" v-for="sd in 10">
+			<navigator class="dx_row dfs_jhjeertt pt20 pm20" v-for="sd in 10" url="/pages/performance/record_details">
 				<view class="dx_col_4 cen">
 					<image src="../../static/img/jiang_a.png" class="jaingap_ddr"></image>
 				</view>
@@ -41,13 +41,12 @@
 					<image src="../../static/img/pk.png" class="pk_deertx"></image>
 				</view>
 
-			</view>
+			</navigator>
 
 
-		</view>
-		
-		
-		<view class="mt20 yj8 sd_jh_drrttxret dx_row">
+		</view >
+
+		<navigator class="mt20 yj8 sd_jh_drrttxret dx_row" url="/pages/performance/record_details">
 			
 			
 					<view class="dx_col_4 cen">
@@ -73,7 +72,7 @@
 					<navigator url="" class="fenghg_eertx">去分享</navigator>
 				</view>
 			
-			</view>
+			</navigator>
 			
 			
 			

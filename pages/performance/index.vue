@@ -33,22 +33,7 @@
 					name: "排行",
 					cls: ""
 				}],
-				sd_ddffdf: [{
-					cls: "",
-					type: 0
-				}, {
-					cls: "",
-					type: 0
-				}, {
-					cls: "",
-					type: 1
-				}, {
-					cls: "",
-					type: 0
-				}, {
-					cls: "",
-					type: 1
-				}]
+				
 			}
 		},
 		components: {

@@ -99,3 +99,65 @@ page {
 .yj8{
 	border-radius: 16upx;
 }
+
+
+
+	.linhg_a {
+		width: 40upx;
+		height: 45upx;
+	}
+
+	.linhg_a.ab {
+		width: 62upx;
+		height: 52upx;
+	}
+
+	.linhg_a.ac {
+		width: 54upx;
+		height: 50upx;
+	}
+
+	.qsd_dxcrtxet {
+		height: 55upx;
+		line-height: 55upx;
+	}
+
+	.wsd_jh_dee {
+		width: 28upx;
+		height: 35upx;
+	}
+
+	.qug_deertxc {
+		display: inline-block;
+		width: 87upx;
+		height: 40upx;
+		text-align: center;
+		line-height: 40upx;
+		background: #667AFF;
+		border-radius: 40upx;
+	}
+
+	.wsiu_ddrertxc {
+		width: 60upx;
+		height: 30upx;
+		border-radius: 30upx;
+		text-align: center;
+		line-height: 30upx;
+		color: #fff;
+		background: #F3AE2F;
+		display: inline-block;
+	}
+
+	.df_jh_ddfrrtxc {
+		line-height: 30upx;
+	}
+
+	.down_eerrq {
+		width: 22upx;
+		height: 13upx;
+	}
+
+	.meiyoushuju {
+		width: 269upx;
+		height: 53upx;
+	}

@@ -9,12 +9,37 @@
 					"bounce": "none" //关闭窗口回弹效果
 				}
 			}
-		},{
+		}, {
+		 	"path": "pages/performance/pk_jieguo",
+		 	"style": {
+		 		"navigationBarTitleText": "PK结果"
+		 	}
+		 },{
+			"path": "pages/performance/pk_zhong",
+			"style": {
+				"navigationBarTitleText": "PK中"
+			}
+		}, {
+			"path": "pages/performance/pk",
+			"style": {
+				"navigationBarTitleText": "pk"
+			}
+		}, {
+			"path": "pages/performance/index",
+			"style": {
+				"navigationBarTitleText": " "
+			}
+		}, {
+			"path": "pages/performance/record_details",
+			"style": {
+				"navigationBarTitleText": "成绩详情"
+			}
+		}, {
 			"path": "pages/user/cidian",
 			"style": {
 				"navigationBarTitleText": "词典",
 				"usingComponents": {
-						"van-swipe-cell": "/wxcomponents/swipe-cell/index"
+					"van-swipe-cell": "/wxcomponents/swipe-cell/index"
 				}
 			}
 		}, {
@@ -24,11 +49,6 @@
 				"usingComponents": {
 					"van-popup": "/wxcomponents/popup/index"
 				}
-			}
-		}, {
-			"path": "pages/performance/index",
-			"style": {
-				"navigationBarTitleText": " "
 			}
 		}, {
 			"path": "pages/independent_study/index",
