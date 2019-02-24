@@ -9,7 +9,43 @@
 					"bounce": "none" //关闭窗口回弹效果
 				}
 			}
-		}, {
+		},{
+			"path": "pages/practice/sjlx",
+			
+			"style": {
+				"navigationBarTitleText": "随机练习",
+				 
+				"app-plus": { 
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue624",
+								"fontSize": "20",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/practice/index",
+			"style": {
+				"navigationBarTitleText": "商务英语练考赛一体化平台",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue623",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},  {
 		 	"path": "pages/performance/pk_jieguo",
 		 	"style": {
 		 		"navigationBarTitleText": "PK结果"
@@ -67,24 +103,7 @@
 					}
 				}
 			}
-		}, {
-			"path": "pages/practice/index",
-			"style": {
-				"navigationBarTitleText": "商务英语练考赛一体化平台",
-				"app-plus": {
-					"titleNView": {
-						"buttons": [
-							//原生标题栏按钮配置,
-							{
-								"text": "\ue623",
-								"fontSize": "24",
-								"fontSrc": "static/fonts/iconfont.ttf"
-							}
-						]
-					}
-				}
-			}
-		}, {
+		},  {
 			"path": "pages/user/user_center",
 			"style": {
 				"navigationBarTitleText": "个人中心",

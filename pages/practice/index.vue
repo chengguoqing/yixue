@@ -38,12 +38,13 @@
 
 
 					<view class="dx_col_12  sdf_jh_derert">
-						<view class="bgff h100 dfgf_jhj_ddfg ab ac">
+					
+						<navigator url="/pages/practice/sjlx" class="bgff h100 dfgf_jhj_ddfg ab ac">
 							<image src="../../static/img/fsdd_sdf_c.png" class="fsdd_sdf_a"></image>
 							<view class="fz26 z6 mt20">
 								随机练习
 							</view>
-						</view>
+						</navigator>
 					</view>
 
 

@@ -2,6 +2,7 @@ var url_d = "https://api.cangniaowl.com/"
 exports.base = {
 	install: function(Vue, options) {
 		Vue.prototype.version = "9.2.1"
+		Vue.prototype.url_d='http://192.168.1.100:8080/#/'
 		Vue.prototype.parseParam = function(data) {
 			var _result = [];
 			for (var key in data) {
