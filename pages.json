@@ -10,10 +10,26 @@
 				}
 			}
 		},{
-			"path": "pages/practice/sjlx",
-			
+			"path": "pages/practice/index",
 			"style": {
-				"navigationBarTitleText": "随机练习",
+				"navigationBarTitleText": "商务英语练考赛一体化平台",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue623",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/practice/sxlx",
+			"style": {
+				"navigationBarTitleText": "顺序练习",
 				 
 				"app-plus": { 
 					"titleNView": {
@@ -28,17 +44,52 @@
 					}
 				}
 			}
-		},{
-			"path": "pages/practice/index",
+		}, {
+			"path": "pages/practice/zxlx",
 			"style": {
-				"navigationBarTitleText": "商务英语练考赛一体化平台",
-				"app-plus": {
+				"navigationBarTitleText": "专项练习",
+				"app-plus": { 
 					"titleNView": {
 						"buttons": [
 							//原生标题栏按钮配置,
 							{
-								"text": "\ue623",
-								"fontSize": "24",
+								"text": "\ue624",
+								"fontSize": "20",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/practice/ztlx",
+			"style": {
+				"navigationBarTitleText": "主题练习",
+				"app-plus": { 
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue624",
+								"fontSize": "20",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/practice/sjlx",
+			"style": {
+				"navigationBarTitleText": "随机练习",
+				 
+				"app-plus": { 
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue624",
+								"fontSize": "20",
 								"fontSrc": "static/fonts/iconfont.ttf"
 							}
 						]

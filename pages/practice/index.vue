@@ -16,22 +16,22 @@
 			<view v-if="idx_ddf==0">
 				<image src="../../static/img/moni.png" class="sd_jh_derrttx" mode=""></image>
 				<view class="dx_row df_df_row">
-					<view class="dx_col_12  sdf_jh_derert">
+					<navigator class="dx_col_12  sdf_jh_derert" url="/pages/practice/ztlx">
 						<view class="bgff h100 dfgf_jhj_ddfg aa">
 							<image src="../../static/img/fsdd_sdf_a.png" class="fsdd_sdf_a"></image>
 							<view class="fz26 z6 mt20">
 								主题练习
 							</view>
 						</view>
-					</view>
+					</navigator>
 
 					<view class="dx_col_12  sdf_jh_derert">
-						<view class="bgff h100 dfgf_jhj_ddfg tr ab">
+						<navigator class="bgff h100 dfgf_jhj_ddfg tr ab" url="/pages/practice/zxlx">
 							<image src="../../static/img/fsdd_sdf_b.png" class="fsdd_sdf_a"></image>
 							<view class="fz26 z6 mt20">
 								专项练习
 							</view>
-						</view>
+						</navigator>
 					</view>
 
 
@@ -52,12 +52,12 @@
 
 
 					<view class="dx_col_12  sdf_jh_derert">
-						<view class="bgff h100 dfgf_jhj_ddfg tr aa ac">
+						<navigator url="/pages/practice/sxlx" class="bgff h100 dfgf_jhj_ddfg tr aa ac">
 							<image src="../../static/img/fsdd_sdf_d.png" class="fsdd_sdf_a"></image>
 							<view class="fz26 z6 mt20">
 								顺序练习
 							</view>
-						</view>
+						</navigator>
 					</view>
 
 

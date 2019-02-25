@@ -161,3 +161,7 @@ page {
 		width: 269upx;
 		height: 53upx;
 	}
+	.dx_body{
+		padding-left: 40upx;
+		padding-right: 40upx;
+	}
