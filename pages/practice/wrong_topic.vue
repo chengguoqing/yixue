@@ -1,8 +1,8 @@
 <template>
 	<view>
+	
 
-
-		<web-view :webview-styles="webviewStyles" :src="url_r+'lianxi?title='+title"></web-view>
+	<web-view :webview-styles="webviewStyles" :src="url_r+'wrong_topic'"></web-view>
 
 
 	</view>
@@ -12,7 +12,6 @@
 		data() {
 			return {
 				url_r: "",
-				title:"",
 				webviewStyles: {
 					progress: {
 						color: '#707DFF'
@@ -22,10 +21,6 @@
 		},
 		onNavigationBarButtonTap(e) {
 
-		},
-		onLoad(p) {
-			this.title=p.title
-			console.log(this.title)
 		},
 		components: {
 
@@ -48,4 +43,7 @@
 		background: rgba(0, 0, 0, 0.5);
 		z-index: 10000;
 	}
+
+
+
 </style>

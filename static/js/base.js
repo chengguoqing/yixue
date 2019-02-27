@@ -3,6 +3,7 @@ exports.base = {
 	install: function(Vue, options) {
 		Vue.prototype.version = "9.2.1"
 		Vue.prototype.url_d='http://duxinggj.com/phone/yixue/#/'
+		//Vue.prototype.url_d='http://192.168.0.62:8081/#/'
 		Vue.prototype.parseParam = function(data) {
 			var _result = [];
 			for (var key in data) {

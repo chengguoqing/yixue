@@ -2,7 +2,7 @@
 	<view>
 	
 
-	<web-view :webview-styles="webviewStyles" :src="url_r+'lianxi'"></web-view>
+	<web-view :webview-styles="webviewStyles" :src="url_r+'moni_jc'"></web-view>
 
 
 	</view>
