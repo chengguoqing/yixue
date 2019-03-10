@@ -1,8 +1,7 @@
-var url_d = "https://api.cangniaowl.com/"
+var url_d = "http://app.yixueyun.cn/"
 exports.base = {
 	install: function(Vue, options) {
 		Vue.prototype.version = "9.2.1"
-		Vue.prototype.url_d='http://192.168.1.100:8080/#/'
 		Vue.prototype.parseParam = function(data) {
 			var _result = [];
 			for (var key in data) {
@@ -215,14 +214,6 @@ function ajax_e(url, canshu, call, ty) {
 		mask: true
 	});
 
-	let user_fo = uni.getStorageSync('user_info')
-	user_fo = JSON.parse(user_fo.rawData)
-	if (!ty) { //为true可以不传token
-		canshu.nickName = user_fo.nickName
-		canshu.avatarUrl = user_fo.avatarUrl
-		canshu.openId = user_fo.openId
-	}
-	console.log(JSON.stringify(canshu))
 	uni.request({
 		url: urlsd,
 		method: "POST",
@@ -231,8 +222,16 @@ function ajax_e(url, canshu, call, ty) {
 		},
 		data: canshu,
 		success: (res) => {
+
 			uni.hideLoading();
-			call(res.data.data)
+			if (res.data.code != 20000) {
+				uni.showToast({
+					icon: "none",
+					title: res.data.message
+				})
+				return
+			}
+			call(res.data)
 		}
 	});
 }

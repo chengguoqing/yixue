@@ -18,7 +18,7 @@
 					<view class="sd_jh_drttx">
 						<image src="../../static/img/dfs_a.png" class="sd_jh_drtycx"></image>
 					</view>
-					<input type="number" value="" placeholder="请输入手机号" placeholder-class="" />
+					<input type="number" v-model="form.phone" placeholder="请输入手机号" placeholder-class="" />
 				</view>
 
 
@@ -26,10 +26,16 @@
 					<view class="sd_jh_drttx">
 						<image src="../../static/img/dfs_b.png" class="sd_jh_drtycx ab"></image>
 					</view>
-					<input type="number" value="" placeholder="短信验证码" placeholder-class="" />
-					<view class="df_hg_ghuoq fz26 ls">
+					<input type="number" v-model="form.messageCode" placeholder="短信验证码" placeholder-class="" />
+					<view class="df_hg_ghuoq fz26 ls" @click="get_yzma()" v-if="jhgg">
 						获取验证码
 					</view>
+
+					<view class="df_hg_ghuoq fz26 ls" v-else>
+						{{daoji}} s重新获取
+					</view>
+
+
 				</view>
 
 
@@ -37,7 +43,7 @@
 					<view class="sd_jh_drttx">
 						<image src="../../static/img/dfs_c.png" class="sd_jh_drtycx ac"></image>
 					</view>
-					<input type="password" value="" placeholder="设置登录密码" placeholder-class="" />
+					<input type="password" v-model="form.password" placeholder="设置登录密码" placeholder-class="" />
 				</view>
 
 				<view class="fz24 mt40">
@@ -47,7 +53,7 @@
 					<navigator class="f_b" style="color: #4ee7c8;" url="/pages/user/xiexi">《用户协议》</navigator>
 				</view>
 
-				<view class="dsf_jh_dffr">
+				<view class="dsf_jh_dffr" @click="zhuce_der">
 					确定
 				</view>
 
@@ -62,11 +68,106 @@
 	export default {
 		data() {
 			return {
-				checkboxChange: true
+				checkboxChange: true,
+				form: {
+					phone: "",
+					messageCode: "",
+					password: ""
+				},
+				daoji: 60, //倒计时
+				jhgg: true,
 			}
 		},
 		components: {},
-		methods: {},
+		methods: {
+			zhuce_der() { //注册按钮触发
+			
+				let th = this
+				if (!th.form.phone) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入手机号码",
+						duration: 2000
+					});
+					return
+				}
+				if (!this.yanza.phone(this.form.phone)) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入正确的手机号码",
+						duration: 2000
+					});
+					return
+				}
+				if (!th.form.messageCode) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入验证码",
+						duration: 2000
+					});
+					return
+				}
+				if (!th.form.password) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入密码",
+						duration: 2000
+					});
+					return
+				}
+				this.post("userRegedit", this.form, function(data) {
+					uni.showToast({
+						title: data.message
+					})
+					setTimeout(a => {
+						uni.redirectTo({
+							url: '/pages/user/denglu'
+						});
+					}, 1000)
+				})
+			},
+			get_yzma() { //获取验证码
+				let th = this
+				if (!th.form.phone) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入手机号码",
+						duration: 2000
+					});
+					return
+				}
+				if (!this.yanza.phone(this.form.phone)) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入正确的手机号码",
+						duration: 2000
+					});
+					return
+				}
+
+
+				if (th.jhgg == true) {
+					th.jhgg = false
+					th.daoji--
+					this.post('sendVerifCode', {
+						phone: th.form.phone
+					}, function(data) {
+						uni.showToast({
+							title: data.message,
+							duration: 2000
+						});
+						var sdf_wer = setInterval(function() {
+							th.daoji--
+							if (th.daoji < 0) {
+								th.daoji = 60
+								th.jhgg = true
+								clearTimeout(sdf_wer)
+							}
+						}, 1000)
+					})
+				}
+			}
+		},
 		mounted() {},
 	}
 </script>

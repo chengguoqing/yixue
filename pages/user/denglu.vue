@@ -32,7 +32,7 @@
 							<view class="sd_jh_drttx">
 								<image src="../../static/img/gfdg_a.png" class="sd_jh_drtycx"></image>
 							</view>
-							<input type="number" value="" placeholder="请输入手机号" placeholder-class="cf" />
+							<input type="number" v-model="denglu_from.phone" placeholder="请输入手机号" placeholder-class="cf" />
 						</view>
 
 
@@ -40,10 +40,14 @@
 							<view class="sd_jh_drttx">
 								<image src="../../static/img/gfdg_b.png" class="sd_jh_drtycx ab"></image>
 							</view>
-							<input type="number" value="" placeholder="请输入验证码" placeholder-class="cf" />
-							<view class="df_hg_ghuoq fz26 cf">
+							<input type="number" v-model="denglu_from.yzm" placeholder="请输入验证码" placeholder-class="cf" />
+							<view class="df_hg_ghuoq fz26 cf" @click="get_yzma()" v-if="jhgg">
 								获取验证码
 							</view>
+							<view class="df_hg_ghuoq fz26 cf f" v-else>
+								{{daoji}} s重新获取
+							</view>
+
 						</view>
 
 
@@ -80,10 +84,10 @@
 
 
 					<view class="sd_h_dertxrftyt box fz24" v-if="isd_df!=2">
-						<view class="box_b ye">
+						<!-- 	<view class="box_b ye">
 							<image src="../../static/img/gandan.png" class="gantang_hao cz" mode=""></image>
 							<text class="ml10">登入失败，用户不存在</text>
-						</view>
+						</view> -->
 						<view class="box_a tr  cf">
 							忘记密码?
 						</view>
@@ -91,9 +95,9 @@
 
 					<view class="" v-if="isd_df!=2">
 
-						<navigator class="sd_jh_dff yj4 " url="/pages/user/improve_information">
+						<view class="sd_jh_dff yj4 " @click="denglu_sd">
 							登录
-						</navigator>
+						</view>
 
 
 
@@ -147,26 +151,117 @@
 					name: "人脸识别",
 					class_e: "tr",
 					cls: ""
-				}]
+				}],
+				denglu_from: {
+					phone: "",
+					yzm: ""
+				},
+				daoji: 60, //倒计时
+				jhgg: true,
 			}
 		},
 		components: {},
 		methods: {
 			qiehuan(sd, idx) {
-				this.tab_qe.map(a => { 
+				this.tab_qe.map(a => {
 					a.cls = ""
 				})
 				this.isd_df = idx
 				sd.cls = "act"
 
-			} 
+			},
+			denglu_sd() { //登录按钮触发
+				let th = this
+				if (this.isd_df == 0) {
+					if (!th.denglu_from.phone) {
+						uni.showToast({
+							icon: "none",
+							title: "请输入手机号码",
+							duration: 2000
+						});
+						return
+					}
+					if (!this.yanza.phone(this.denglu_from.phone)) {
+						uni.showToast({
+							icon: "none",
+							title: "请输入正确的手机号码",
+							duration: 2000
+						});
+						return
+					}
+
+					if (!th.denglu_from.yzm) {
+						uni.showToast({
+							icon: "none",
+							title: "请输入验证码",
+							duration: 2000
+						});
+						return
+					}
+
+					let mobileLogin = {}
+					mobileLogin.phone = this.denglu_from.phone
+					mobileLogin.verifCode = this.denglu_from.yzm
+					this.post('mobileLogin', mobileLogin, function(data) {
+						uni.showToast({
+							title: data.message
+						})
+						setTimeout(a => {
+							uni.reLaunch({
+								url: '/pages/user/index'
+							});
+						}, 1000)
+					})
+
+				}
+
+			},
+			get_yzma() { //获取验证码
+				let th = this
+				if (!th.denglu_from.phone) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入手机号码",
+						duration: 2000
+					});
+					return
+				}
+				if (!this.yanza.phone(this.denglu_from.phone)) {
+					uni.showToast({
+						icon: "none",
+						title: "请输入正确的手机号码",
+						duration: 2000
+					});
+					return
+				}
+
+
+				if (th.jhgg == true) {
+					th.jhgg = false
+
+					this.post('sendVerifCode', {
+						phone: th.denglu_from.phone
+					}, function(data) {
+						th.daoji--
+						uni.showToast({
+							title: data.message,
+							duration: 2000
+						});
+
+						var sdf_wer = setInterval(function() {
+							th.daoji--
+							if (th.daoji < 0) {
+								th.daoji = 60
+								th.jhgg = true
+								clearTimeout(sdf_wer)
+							}
+						}, 1000)
+					})
+				}
+			}
 		},
-		mounted() { 
-// 			console.log(2222)
-// 			var info = plus.push.getClientInfo(); 
-// 			console.log(JSON.stringify(info))
-		},
-	} 
+		mounted() {},
+	}
 </script>
 <style scoped>
 	.sd_h_dertxrftyt {
