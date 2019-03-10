@@ -2,18 +2,45 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/user/denglu",
+			"path": "pages/practice/index",
 			"style": {
-				"navigationBarTitleText": " ",
+				"navigationBarTitleText": "商务英语练考赛一体化平台",
 				"app-plus": {
-					"bounce": "none" //关闭窗口回弹效果
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue623",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
 				}
 			}
 		},{
-			"path": "pages/practice/sjlx",
-			
+			"path": "pages/practice/wrong_topic",
 			"style": {
-				"navigationBarTitleText": "随机练习",
+				"navigationBarTitleText": "我的错题",
+					"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#fff",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue624",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/practice/moni",
+			"style": {
+				"navigationBarTitleText": "模拟竞赛",
 				 
 				"app-plus": { 
 					"titleNView": {
@@ -28,17 +55,60 @@
 					}
 				}
 			}
-		},{
-			"path": "pages/practice/index",
+		}, {
+			"path": "pages/user/denglu",
 			"style": {
-				"navigationBarTitleText": "商务英语练考赛一体化平台",
+				"navigationBarTitleText": " ",
 				"app-plus": {
+					"bounce": "none" //关闭窗口回弹效果
+				}
+			}
+		},{
+			"path": "pages/practice/zxlx",
+			"style": {
+				"navigationBarTitleText": "专项练习",
+				"app-plus": { 
 					"titleNView": {
 						"buttons": [
 							//原生标题栏按钮配置,
 							{
-								"text": "\ue623",
-								"fontSize": "24",
+								"text": "\ue624",
+								"fontSize": "20",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/practice/ztlx",
+			"style": {
+				"navigationBarTitleText": "主题练习",
+				"app-plus": { 
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue624",
+								"fontSize": "20",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		},{
+			"path": "pages/practice/sjlx",
+			"style": {
+				"navigationBarTitleText": "随机练习2",
+				 
+				"app-plus": { 
+					"titleNView": {
+						"buttons": [
+							//原生标题栏按钮配置,
+							{
+								"text": "\ue624",
+								"fontSize": "20",
 								"fontSrc": "static/fonts/iconfont.ttf"
 							}
 						]
