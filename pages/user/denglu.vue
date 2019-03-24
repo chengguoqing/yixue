@@ -12,8 +12,8 @@
 
 			</view>
 
-			<view class="sd_jh_derertx box pt30">
-				<view class="box_a fz31 cf" :class="[sd.class_e,sd.cls]" v-for="(sd,idx) in tab_qe" @click="qiehuan(sd,idx)">
+			<view class="sd_jh_derertx box ">
+				<view class="box_a fz31 cf  pt30 pm30" :class="[sd.class_e,sd.cls]" v-for="(sd,idx) in tab_qe" @tap="qiehuan(sd,idx)">
 					<view class="f_b pr">
 						{{sd.name}}
 						<image src="../../static/img/down_icon.jpg" class="down_icon_drt" v-if="sd.cls"></image>
@@ -22,7 +22,7 @@
 			</view>
 
 
-			<view class="fg_hg_page pt70">
+			<view class="fg_hg_page pt40">
 
 				<view class="df_hh_box_ert">
 
@@ -58,7 +58,7 @@
 							<view class="sd_jh_drttx">
 								<image src="../../static/img/gfdg_c.png" class="sd_jh_drtycx ac"></image>
 							</view>
-							<input type="number" value="" placeholder="手机号/用户名" placeholder-class="cf" />
+							<input type="number" v-model="login.phone" placeholder="手机号/用户名" placeholder-class="cf" />
 						</view>
 
 
@@ -66,7 +66,7 @@
 							<view class="sd_jh_drttx">
 								<image src="../../static/img/gfdg_b.png" class="sd_jh_drtycx ab"></image>
 							</view>
-							<input type="password" value="" placeholder="请输入密码" placeholder-class="cf" />
+							<input type="password" v-model="login.password" placeholder="请输入密码" placeholder-class="cf" />
 
 						</view>
 
@@ -139,6 +139,10 @@
 		data() {
 			return {
 				isd_df: 0, //0 手机登录 1账号登录 2人脸识别
+				login: { //账号登录
+					phone: "", //用户名
+					password: "" //密码
+				},
 				tab_qe: [{
 					name: "手机登录",
 					class_e: "tl",
@@ -203,6 +207,47 @@
 					mobileLogin.phone = this.denglu_from.phone
 					mobileLogin.verifCode = this.denglu_from.yzm
 					this.post('mobileLogin', mobileLogin, function(data) {
+						uni.showToast({
+							title: data.message
+						})
+						setTimeout(a => {
+							uni.reLaunch({
+								url: '/pages/user/index'
+							});
+						}, 1000)
+					})
+
+				} else {
+
+					if (!th.login.phone) {
+						uni.showToast({
+							icon: "none",
+							title: "请输入手机号码",
+							duration: 2000
+						});
+						return
+					}
+					if (!this.yanza.phone(this.login.phone)) {
+						uni.showToast({
+							icon: "none",
+							title: "请输入正确的手机号码",
+							duration: 2000
+						});
+						return
+					}
+					if (!th.login.password) {
+						uni.showToast({
+							icon: "none",
+							title: "请输入密码",
+							duration: 2000
+						});
+						return
+					}
+
+					let accountLogin = {} 
+					accountLogin.phone = this.login.phone
+					accountLogin.verifCode = this.login.password
+					this.post('accountLogin', accountLogin, function(data) {
 						uni.showToast({
 							title: data.message
 						})

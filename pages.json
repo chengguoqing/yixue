@@ -2,6 +2,26 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/user/improve_information",
+			"style": {
+				"navigationBarTitleText": "完善基本信息",
+				"navigationBarBackgroundColor": "#fff",
+				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black",
+				"usingComponents": {
+					"van-popup": "/wxcomponents/popup/index",
+					"van-area": "/wxcomponents/area/index"
+				}
+			}
+		},{
+			"path": "pages/user/denglu",
+			"style": {
+				"navigationBarTitleText": " ",
+				"app-plus": {
+					"bounce": "none" //关闭窗口回弹效果
+				}
+			}
+		},{
 			"path": "pages/practice/index",
 			"style": {
 				"navigationBarTitleText": "商务英语练考赛一体化平台",
@@ -56,14 +76,6 @@
 				}
 			}
 		}, {
-			"path": "pages/user/denglu",
-			"style": {
-				"navigationBarTitleText": " ",
-				"app-plus": {
-					"bounce": "none" //关闭窗口回弹效果
-				}
-			}
-		},{
 			"path": "pages/practice/zxlx",
 			"style": {
 				"navigationBarTitleText": "专项练习",
@@ -248,19 +260,7 @@
 					"van-popup": "/wxcomponents/popup/index"
 				}
 			}
-		}, {
-			"path": "pages/user/improve_information",
-			"style": {
-				"navigationBarTitleText": "完善基本信息",
-				"navigationBarBackgroundColor": "#fff",
-				"backgroundColor": "#fff",
-				"navigationBarTextStyle": "black",
-				"usingComponents": {
-					"van-popup": "/wxcomponents/popup/index",
-					"van-area": "/wxcomponents/area/index"
-				}
-			}
-		}, {
+		},  {
 			"path": "pages/user/school_name",
 			"style": {
 				"navigationBarTitleText": "院校名称",
